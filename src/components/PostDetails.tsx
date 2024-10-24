@@ -89,7 +89,7 @@ export const PostDetails: React.FC<Props> = ({ post }) => {
                         type="button"
                         className="delete is-small"
                         aria-label="delete"
-                        onClick={() => removeComment(id)}
+                        onClick={() => removeComment(comment.id)}
                       >
                         {/* delete button */}
                       </button>

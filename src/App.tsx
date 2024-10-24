@@ -79,7 +79,7 @@ export const App = () => {
                 {!postsIsLoading && posts.length > 0 && (
                   <PostsList
                     posts={posts}
-                    choosenPost={chosenPost}
+                    chosenPost={chosenPost}
                     onSelect={setChosenPost}
                   />
                 )}

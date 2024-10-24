@@ -46,7 +46,7 @@ export const UserSelector: React.FC<Props> = ({
     const currentUser = e.target as HTMLAnchorElement;
 
     if (currentUser.tagName === 'A') {
-      const userId = +currentUser.href.split('-').slice(-1)[0];
+      const userId = Number(currentUser.getAttribute('data-user-id'));
 
       onSelect(users.find(user => user.id === userId) || null);
       setMenuActive(false);
@@ -86,6 +86,7 @@ export const UserSelector: React.FC<Props> = ({
               className={cn('dropdown-item', {
                 'is-active': user.id === selectedUser?.id,
               })}
+              data-user-id={user.id}
               key={user.id}
             >
               {user.name}
